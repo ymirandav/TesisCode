@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa de Paraderos de Bus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Css/style.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqlDocQnb6h0kqgLy-xJO4GPy5UVosY4M&callback=initMap&libraries=&v=weekly" async defer></script>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/paradero.png" alt="Logo"> BusCaminas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="selectRoute.html">Buscar Ruta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-4">
+        <h1 class="mb-3">Seleccione una Ruta</h1>
+        <div class="mb-3">
+            <select id="routeSelector" class="form-select">
+                <option value="">Seleccione una ruta</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <div class="form-check form-check-inline">
+                <input type="radio" id="ida" name="displayOption" value="ida" class="form-check-input">
+                <label for="ida" class="form-check-label">Ida</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="vuelta" name="displayOption" value="vuelta" class="form-check-input">
+                <label for="vuelta" class="form-check-label">Vuelta</label>
+            </div>
+        </div>
+        <button onclick="loadRoute()" class="btn btn-primary">Mostrar Ruta</button>
+        <div style="margin-top: 20px;"> <!-- Tabla debajo del mapa -->
+            <table class="table table-striped" id="infoTable" style="width: 100%; display: none;">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Precio</th>
+                        <th id="idaColumn">Ida (Inicio - Fin)</th>
+                        <th id="vueltaColumn">Vuelta (Inicio - Fin)</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody id="routeInfo">
+                    <tr>
+                        <td>S/. 1.00</td>
+                        <td id="idaInfo">-</td>
+                        <td id="vueltaInfo">-</td>
+                        <td>8:00 AM a 9:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="map" style="height: 500px; width: 100%; margin-top: 20px;"></div> <!-- Mapa con ancho completo -->
+        
+        <div id="imageContainer" class="mt-3 d-flex justify-content-center"> <!-- Contenedor de la imagen debajo de la tabla -->
+            <img id="routeImage" src="" alt="Imagen de la Ruta" style="max-width: 100%; max-height: 200px; display: none;">
+        </div>
+    </div>
+    
+    <script src="JS/mapFunctions.js"></script>
+</body>
+</html>

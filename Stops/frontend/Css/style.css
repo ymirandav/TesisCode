@@ -1,0 +1,61 @@
+
+#panel {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+.legend {
+    margin-top: 20px;
+}
+.legend img {
+    vertical-align: middle;
+}
+.d-flex {
+    display: flex;
+    align-items: stretch;
+    height: 500px;
+}
+
+#map {
+    flex: 1 0 70%; 
+    height: 100%;
+    margin-right: 10px; 
+}
+
+#infoTable {
+    flex: 1 0 30%; 
+    height: 100%;
+    overflow-y: auto;
+}
+
+.table {
+    font-size: 0.9rem; 
+}
+
+.navbar {
+    background-color: #003366;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-brand img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.login-button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.register-button {
+    background-color: #FF5722; /* Naranja */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}

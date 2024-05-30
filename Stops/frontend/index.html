@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla Principal - Transporte Público de Arequipa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #003366;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar-brand img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        .container {
+            flex: 1;
+            margin-top: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .footer {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 20px 0;
+            margin-top: 40px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+        .footer a {
+            color: #ffffff;
+            margin: 0 10px;
+        }
+        .section-title {
+            color: #003366;
+            margin-bottom: 30px;
+        }
+        .login-link {
+            color: #4CAF50; /* Verde */
+        }
+        .register-link {
+            color: #FF5722; /* Naranja */
+        }
+        .login-button {
+            background-color: #4CAF50; /* Verde */
+            color: #003366;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            }
+        .register-button {
+            background-color: #FF5722; /* Naranja */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/paradero.png" alt="Logo"> BusCaminas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="selectRoute.html">Buscar Ruta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultRoute.html">Ver Paraderos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link register-button" href="register.html">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link login-button" href="login.html">Iniciar Sesión</a>
+                    </li>                                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container text-center">
+
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Buscar Ruta</h5>
+                        <p class="card-text">Seleccione origen y destino para buscar la mejor ruta.</p>
+                        <a href="selectRoute.html" class="btn btn-primary">Buscar Ruta</a>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ver Paraderos</h5>
+                        <p class="card-text">Consulta las paradas de las rutas.</p>
+                        <a href="consultRoute.html" class="btn btn-primary">Ver Paraderos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Información adicional -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <p>Somos una aplicación dedicada a mejorar la experiencia de los usuarios del transporte público en Arequipa, proporcionando información precisa y actualizada sobre rutas y paraderos.</p>
+            </div>
+            <div class="col-md-6">
+                <h2 class="section-title">Contacto</h2>
+                <p>Para más información, sugerencias o consultas, por favor contáctenos a través de nuestro formulario de contacto.</p>
+                <a href="contact.html" class="btn btn-secondary">Formulario de Contacto</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 Aplicación de Transporte Público de Arequipa. Todos los derechos reservados.</p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <a href="https://www.facebook.com/yoshiro.mirandavaldivia/"><img src="Images/facebook.png" alt="Facebook" width="30"></a>
+            <a href="https://x.com/yoshiromiranda"><img src="Images/X.png" alt="Twitter" width="30"></a>
+            <a href="https://www.instagram.com/yoshi_miranda_/"><img src="Images/ig.png" alt="Instagram" width="30"></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
