@@ -223,7 +223,7 @@ function saveFavoriteRoute() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}` // Asegúrate de incluir "Bearer"
+            'Authorization': `Bearer ${token}` 
         },
         body: JSON.stringify({ origen: originStop, destino: destinationStop, precio: price })
     })

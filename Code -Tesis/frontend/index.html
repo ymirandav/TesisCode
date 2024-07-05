@@ -52,24 +52,33 @@
             margin-bottom: 30px;
         }
         .login-link {
-            color: #4CAF50; /* Verde */
+            color: #4CAF50;
         }
         .register-link {
-            color: #FF5722; /* Naranja */
+            color: #FF5722;
         }
         .login-button {
-            background-color: #4CAF50; /* Verde */
+            background-color: #4CAF50;
             color: #003366;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            }
+        }
         .register-button {
-            background-color: #FF5722; /* Naranja */
+            background-color: #FF5722;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+        }
+        .large-image {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .margin-right {
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -95,7 +104,7 @@
                         <a class="nav-link" href="contact.html">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link register-button" href="register.html">Registrarse</a>
+                        <a class="nav-link margin-right" href="history.html">Historial</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link login-button" href="login.html">Iniciar Sesión</a>
@@ -107,9 +116,11 @@
 
     <!-- Contenido principal -->
     <div class="container text-center">
-
-        <div class="row justify-content-center">
-            <div class="col-md-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-4">
+                <img src="images/caricatura.jpg" alt="Imagen Representativa" class="large-image">
+            </div>
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Buscar Ruta</h5>
@@ -118,7 +129,7 @@
                     </div>
                 </div>                
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Ver Paraderos</h5>
@@ -148,14 +159,45 @@
     <!-- Pie de página -->
     <footer class="footer text-center">
         <div class="container">
-            <p>&copy; 2024 Aplicación de Transporte Público de Arequipa. Todos los derechos reservados.</p>
-            <p>Síguenos en nuestras redes sociales:</p>
-            <a href="https://www.facebook.com/yoshiro.mirandavaldivia/"><img src="Images/facebook.png" alt="Facebook" width="30"></a>
-            <a href="https://x.com/yoshiromiranda"><img src="Images/X.png" alt="Twitter" width="30"></a>
-            <a href="https://www.instagram.com/yoshi_miranda_/"><img src="Images/ig.png" alt="Instagram" width="30"></a>
+            <div class="footer-content">
+                <!-- <div class="left-image">
+                    <img src="Images/paradero.png" alt="Logo" width="200">
+                </div> -->
+                <div class="footer-text">
+                    <p>&copy; 2024 Aplicación de Transporte Público de Arequipa. Todos los derechos reservados.</p>
+                    <p>Síguenos en nuestras redes sociales:</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/yoshiro.mirandavaldivia/" target="blank">
+                            <img src="Images/facebook.png" alt="Facebook" width="30">
+                        </a>
+                        <a href="https://x.com/yoshiromiranda" target="blank">
+                            <img src="Images/X.png" alt="X" width="30">
+                        </a>
+                        <a href="https://www.instagram.com/yoshi_miranda_/" target="blank">
+                            <img src="Images/ig.png" alt="Instagram" width="30">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <style>
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .left-image {
+            margin-right: 20px;
+        }
+        .footer-text {
+            text-align: center;
+        }
+        .footer .social-links a {
+            margin: 0 10px;
+        }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
